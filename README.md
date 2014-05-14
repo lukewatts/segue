@@ -1,4 +1,8 @@
-segue
-=====
+Segue:
+======
 
-A minimalistic Wordpress theme 
+A minimalistic Wordpress theme. Named after the Cloudkicker song.
+
+Features
+---------
+...
