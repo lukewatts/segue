@@ -37,31 +37,18 @@
           <span class="icon-bar"></span>
         </a>
         <a class="brand" href="./index.html">Andrew <span>J</span> Byrne</a>
+          <?php
 
-        <div class="nav-collapse collapse"> 
-          <ul>
-            <li><a class="ajax-link" href="pages/about.html">About</a></li>
-            <li><a class="ajax-link" href="pages/projects.html">Projects</a></li>
-            <li><a class="ajax-link" href="pages/props.html">Props</a></li>
-            <li><a class="ajax-link" href="pages/contact.html">Contact</a></li>
-          </ul>
+            $args = array(
+              'theme_location'  => 'Header Nav',
+              'menu'            => 'header-nav',
+              'container'       => 'ul',
+              'menu_class'      => 'nav'
+            );
 
-        </div><!-- .nav-collapse -->
+            wp_nav_menu( $args );
 
-            <ul class="nav">
-                <li>
-                  <a class="ajax-link" href="pages/contact.html">Contact</a>
-                </li>
-                <li>
-                  <a class="ajax-link" href="pages/projects.html">Projects</a>
-                </li>
-                <li>
-                  <a class="ajax-link" href="pages/props.html">Props</a>
-                </li>
-                <li>
-                  <a class="ajax-link" href="pages/about.html">About</a>
-                </li>
-            </ul><!-- .nav -->    
+          ?>
       </div><!-- .container -->
     </div><!-- .navbar-inner -->
   </div><!-- .navbar -->
@@ -75,17 +62,17 @@
         <div class="news">
           <h3>Flavours of the week</h3>
           <a href = "lorempixel.com">
-            <img src="img/placeholder.jpg" alt=""/>
+            <img src="<?php echo IMG; ?>placeholder.jpg" alt=""/>
           </a>
         </div><!-- .news -->
       </div><!-- .span6.ctb -->
 
       <div class="span4 sidebar">
         <a href ="http://codepen.io">
-          <img class= "codepen" src="img/codepen-black.png" alt=""/>
+          <img class= "codepen" src="<?php echo IMG; ?>codepen-black.png" alt=""/>
         </a> 
         <a href ="http://github.com">
-          <img class= "github" src="img/github.png" alt=""/>
+          <img class= "github" src="<?php echo IMG; ?>github.png" alt=""/>
         </a>
 
         <div id="jstwitter">
@@ -96,9 +83,6 @@
     </div><!-- .row -->
   </div><!-- .container -->
 
-  
-  <script src="assets/js/vendor/jquery-1.9.1.min.js"></script>
-  <script src="assets/js/vendor/bootstrap.min.js"></script>
   <script src="assets/js/twitter.js"></script>  
   <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
   <script src="assets/js/vendor/jquery.capty.js"></script>

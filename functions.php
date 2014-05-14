@@ -22,5 +22,7 @@ function segue_load_scripts() {
   wp_enqueue_style( 'seque_style', get_stylesheet_uri(), 'bootstrap-responsive' );
 
   wp_enqueue_script( 'modernizr', JS . 'vendor/modernizr-2.6.2-respond-1.1.0.min.js', false, false );
+
+  wp_enqueue_script( 'bootstrap-js', JS . 'vendor/bootstrap.min.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'segue_load_scripts' );
