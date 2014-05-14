@@ -51,12 +51,14 @@ body {
 .navbar .navbar-inner .brand, .navbar .navbar-inner .brand > span {
   font-size: 2rem;
   color: #7d7f6a;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .navbar .navbar-inner .brand:hover {
   color: #f8f8f8;
-  -webkit-transition: color 0.5s ease-in;
-  transition: color 0.5s ease-in;
 }
 
 .navbar .navbar-inner .nav {
@@ -80,12 +82,14 @@ body {
 .navbar .navbar-inner .nav li a {
   color: #7d7f6a;
   display: block;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .navbar .navbar-inner .nav li a:hover {
   color: #f8f8f8;
-  -webkit-transition: color 0.2s ease-in;
-  transition: color 0.2s ease-in;
 }
 
 .navbar .navbar-inner .nav-collapse {
@@ -102,13 +106,15 @@ body {
 
 .navbar .navbar-inner .nav-collapse a {
   color: #7d7f6a;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .navbar .navbar-inner .nav-collapse a:hover {
   text-decoration: none;
   color: #f8f8f8;
-  -webkit-transition: color 0.2s ease-in;
-  transition: color 0.2s ease-in;
 }
 
 /*====WELCOME - to be deleted ===*/
