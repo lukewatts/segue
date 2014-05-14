@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="style.css">  
 
   <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <?php wp_head(); ?>
 </head>
 
 <body>
@@ -104,4 +105,5 @@
   <script src="assets/js/vendor/jquery.capty.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
+<?php wp_footer(); ?>
 </html>
