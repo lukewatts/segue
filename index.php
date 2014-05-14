@@ -10,19 +10,17 @@
   
   <!-- TITLE -->
   <title><?php wp_title(); ?></title>
-
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  
+  <!-- WORDPRESS STUFF -->
+  <?php wp_head(); ?>
+  
+  <!-- Keep enough space for header -->
   <style>
     body {
       padding-top: 180px;
       padding-bottom: 40px;
     }
   </style>
-  <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css">
-  <link rel="stylesheet" href="style.css">  
-
-  <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-  <?php wp_head(); ?>
 </head>
 
 <body>
