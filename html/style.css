@@ -1,0 +1,301 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*=========================================================================
+  MIXINS
+  ========================================================================== */
+/*=========================================================================
+  VARIABLES
+  ========================================================================== */
+/*=========================================================================
+  Shtylin' it!
+  ========================================================================== */
+/* line 37, main.scss */
+body {
+  background: #f8f8f8;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  overflow-y: scroll;
+}
+
+/*====NAVIGATION ===*/
+/* line 46, main.scss */
+.navbar .navbar-inner {
+  background: #3f4035;
+  height: 120px;
+  font-size: 1.5rem;
+  /*---brand ---*/
+  /*---navigation ---*/
+}
+/* line 52, main.scss */
+.navbar .navbar-inner .brand {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+}
+@media (max-width: 979px) {
+  /* line 52, main.scss */
+  .navbar .navbar-inner .brand {
+    top: 0;
+    margin-left: 5rem;
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  /* line 52, main.scss */
+  .navbar .navbar-inner .brand {
+    margin-left: 1rem;
+  }
+}
+/* line 66, main.scss */
+.navbar .navbar-inner .brand, .navbar .navbar-inner .brand > span {
+  font-size: 2rem;
+  color: #7d7f6a;
+}
+/* line 71, main.scss */
+.navbar .navbar-inner .brand:hover {
+  color: #f8f8f8;
+  -webkit-transition: color 0.5s ease-in;
+  transition: color 0.5s ease-in;
+}
+/* line 75, main.scss */
+.navbar .navbar-inner .nav {
+  position: absolute;
+  bottom: 0;
+  right: 5rem;
+}
+@media (max-width: 979px) {
+  /* line 75, main.scss */
+  .navbar .navbar-inner .nav {
+    display: none;
+  }
+}
+/* line 83, main.scss */
+.navbar .navbar-inner .nav li {
+  padding: 0px 10px;
+  /* This is Hacky.  It reverses order of the list items */
+  float: right;
+}
+/* line 87, main.scss */
+.navbar .navbar-inner .nav li a {
+  color: #7d7f6a;
+  display: block;
+}
+/* line 91, main.scss */
+.navbar .navbar-inner .nav li a:hover {
+  color: #f8f8f8;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+/* line 96, main.scss */
+.navbar .navbar-inner .nav-collapse {
+  float: right;
+  list-style: none;
+  margin-left: 1rem;
+}
+@media (min-width: 979px) {
+  /* line 96, main.scss */
+  .navbar .navbar-inner .nav-collapse {
+    display: none;
+  }
+}
+/* line 103, main.scss */
+.navbar .navbar-inner .nav-collapse a {
+  color: #7d7f6a;
+}
+/* line 106, main.scss */
+.navbar .navbar-inner .nav-collapse a:hover {
+  text-decoration: none;
+  color: #f8f8f8;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+/*====WELCOME - to be deleted ===*/
+/* line 114, main.scss */
+.welcome {
+  border: 1px dotted #3f4035;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  position: relative;
+}
+/* line 121, main.scss */
+.welcome img {
+  float: left;
+  width: 20%;
+}
+/* line 125, main.scss */
+.welcome span {
+  vertical-align: center;
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+}
+
+/*====CONTENT===*/
+/* line 140, main.scss */
+.ctb, .sidebar {
+  line-height: 1.4rem;
+}
+
+/*====SIDEBAR===*/
+/* line 145, main.scss */
+.sidebar {
+  float: right;
+  /*--links--*/
+  /*--twitter--*/
+}
+/* line 149, main.scss */
+.sidebar .codepen {
+  width: 40%;
+}
+/* line 152, main.scss */
+.sidebar .github {
+  width: 20%;
+}
+/* line 155, main.scss */
+.sidebar .codepen, .sidebar .github {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  padding-bottom: 1rem;
+  margin-right: 1rem;
+  margin-top: -1.7rem;
+}
+/* line 162, main.scss */
+.sidebar .codepen:hover, .sidebar .github:hover {
+  opacity: .5;
+}
+/* line 167, main.scss */
+.sidebar #jstwitter {
+  float: left;
+  font-size: .9rem;
+}
+/* line 170, main.scss */
+.sidebar #jstwitter .tweet {
+  margin: 0 auto 1rem auto;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px dotted #ccc;
+  color: #3f4035;
+}
+/* line 176, main.scss */
+.sidebar #jstwitter .tweet .time {
+  font-style: italic;
+  font-size: .8rem;
+}
+
+/*--HOME/NEWS PAGE--*/
+/* line 185, main.scss */
+.ctb {
+  font-size: 1rem;
+}
+/* line 187, main.scss */
+.ctb .news {
+  margin-top: 5rem;
+}
+/* line 189, main.scss */
+.ctb .news h3 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+/*--ABOUT PAGE--*/
+/* line 200, main.scss */
+.ctb .about .me {
+  height: 80%;
+  float: left;
+  margin-right: 1rem;
+}
+
+/*--PROJECTS--*/
+/* line 212, main.scss */
+.ctb .projects {
+  margin-left: 0px;
+  text-align: center;
+}
+/* line 215, main.scss */
+.ctb .projects img {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  height: 200px;
+}
+/* line 220, main.scss */
+.ctb .projects img:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+/* line 226, main.scss */
+.ctb .project-column1 {
+  float: left;
+}
+/* line 229, main.scss */
+.ctb .project-column2 {
+  float: right;
+}
+/* line 233, main.scss */
+.ctb .capty-wrapper {
+  margin-bottom: 2rem;
+}
+/* line 236, main.scss */
+.ctb .capty-caption {
+  color: #3f4035;
+  opacity: 1;
+  background: #f8f8f8;
+}
+
+/*--PROPS--*/
+/* line 247, main.scss */
+.ctb .props img {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  opacity: .8;
+  padding-bottom: 1rem;
+  width: 50%;
+}
+/* line 253, main.scss */
+.ctb .props img:hover {
+  opacity: 1;
+}
+
+/*--CONTACT--*/
+/* line 264, main.scss */
+form div {
+  padding-bottom: 3rem;
+}
+/* line 267, main.scss */
+form span {
+  padding-top: 10px;
+}
+/* line 270, main.scss */
+form .name, form .email {
+  float: right;
+  width: 60%;
+  font: inherit;
+}
+/* line 275, main.scss */
+form textarea {
+  float: right;
+  width: 60%;
+  font: inherit;
+}
+/* line 280, main.scss */
+form .submit {
+  float: left;
+  margin-top: 2rem;
+}
+/* line 284, main.scss */
+form .error {
+  color: rgba(32, 15, 12, 0.63);
+  padding-top: 1rem;
+  text-shadow: 0px 0px 5px #F9895F;
+}
