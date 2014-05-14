@@ -26,3 +26,22 @@ function segue_load_scripts() {
   wp_enqueue_script( 'bootstrap-js', JS . 'vendor/bootstrap.min.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'segue_load_scripts' );
+
+/**
+ * Register our nav menus with child theme support
+ */
+if ( ! function_exists( 'segue_register_menus' ) ) {
+  /**
+   * Register our menus
+   * @return string
+   */
+  function segue_register_menus() {
+
+    $locations = array(
+      'header' => __( 'Primary Menu', 'segue' ),
+    );
+    register_nav_menus( $locations );
+
+  }
+  add_action( 'init', 'segue_register_menus' );
+}

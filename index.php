@@ -36,12 +36,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="./index.html">Andrew <span>J</span> Byrne</a>
+        <a class="brand" href="<?php bloginfo( 'site-url' ); ?>">Andrew <span>J</span> Byrne</a>
           <?php
 
             $args = array(
-              'theme_location'  => 'Header Nav',
-              'menu'            => 'header-nav',
+              'theme_location'  => 'header',
+              'menu'            => 'Primary Menu',
               'container'       => 'ul',
               'menu_class'      => 'nav'
             );
