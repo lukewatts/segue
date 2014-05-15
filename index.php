@@ -37,18 +37,37 @@
           <span class="icon-bar"></span>
         </a>
         <a class="brand" href="<?php bloginfo( 'site-url' ); ?>">Andrew <span>J</span> Byrne</a>
+        
+        <div class="nav-collapse collapse">
           <?php
 
             $args = array(
               'theme_location'  => 'header',
               'menu'            => 'Primary Menu',
               'container'       => 'ul',
-              'menu_class'      => 'nav'
+              'menu_class'      => '',
+              'menu_id'         => 'mobile-menu'
             );
 
             wp_nav_menu( $args );
 
           ?>
+
+        </div><!-- .nav-collapse -->
+
+        <?php
+
+          $args = array(
+            'theme_location'  => 'header',
+            'menu'            => 'Primary Menu',
+            'container'       => 'ul',
+            'menu_class'      => 'nav'
+          );
+
+          wp_nav_menu( $args );
+
+        ?>
+
       </div><!-- .container -->
     </div><!-- .navbar-inner -->
   </div><!-- .navbar -->
@@ -83,10 +102,6 @@
     </div><!-- .row -->
   </div><!-- .container -->
 
-  <script src="assets/js/twitter.js"></script>  
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-  <script src="assets/js/vendor/jquery.capty.js"></script>
-  <script src="assets/js/main.js"></script>
   <?php wp_footer(); ?>
 </body>
 </html>

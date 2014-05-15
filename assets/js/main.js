@@ -1,14 +1,14 @@
-$(document).ready(function() {   
+jQuery(document).ready(function($) {   
 
-    /*=============================
-    Easy-peasy jQuery AJAX
-    =============================*/
+//  /*=============================
+//  Easy-peasy jQuery AJAX
+//  =============================*/
 
-    $('.ajax-link').click(function() {
-        var url=$(this).attr('href');     
-		$('.ctb').load(url);	
-	        return false;	        
-	}); //end click   
+//  $('.ajax-link').click(function() {
+//    var url=$(this).attr('href');     
+// 	  $('.ctb').load(url);	
+// 	  return false;	        
+// 	}); //end click   
 
     /*=============================
     Animate header on page scroll

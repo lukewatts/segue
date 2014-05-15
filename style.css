@@ -75,8 +75,8 @@ body {
 
 .navbar .navbar-inner .nav li {
   padding: 0px 10px;
-  /* This is Hacky.  It reverses order of the list items */
-  float: right;
+  /*This is Hacky.  It reverses order of the list items 
+  float: right;*/
 }
 
 .navbar .navbar-inner .nav li a {
@@ -115,6 +115,11 @@ body {
 .navbar .navbar-inner .nav-collapse a:hover {
   text-decoration: none;
   color: #f8f8f8;
+}
+
+/* Fixes Navbar positioning with hacky reverse order thingy */
+.navbar .nav {
+  right: 0;
 }
 
 /*====WELCOME - to be deleted ===*/

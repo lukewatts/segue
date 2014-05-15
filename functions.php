@@ -14,16 +14,17 @@ define( 'IMG', ASSETS . 'img/' );
  * @return string Ruturns absolute urls to scripts
  */
 function segue_load_scripts() {
-  /**
-   * Load our stylesheets with dependencies
-   */
+  // Load our stylesheets with dependencies
   wp_enqueue_style( 'bootsrtap', CSS . 'bootstrap.min.css' );
   wp_enqueue_style( 'bootrap-responsive', CSS . 'bootstrap-responsive.min.css', 'bootstrap' );
-  wp_enqueue_style( 'seque_style', get_stylesheet_uri(), 'bootstrap-responsive' );
+  wp_enqueue_style( 'seque-style', get_stylesheet_uri(), 'bootstrap-responsive' );
 
+  // Header Scripts
   wp_enqueue_script( 'modernizr', JS . 'vendor/modernizr-2.6.2-respond-1.1.0.min.js', false, false );
 
-  wp_enqueue_script( 'bootstrap-js', JS . 'vendor/bootstrap.min.js', array(), false, true );
+  // Footer Scripts
+  wp_enqueue_script( 'bootstrap-js', JS . 'vendor/bootstrap.min.js', array( 'jquery' ), false, true );
+  wp_enqueue_script( 'segue-main', JS . 'main.js', array( 'jquery' ), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'segue_load_scripts' );
 
