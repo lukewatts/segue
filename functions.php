@@ -54,3 +54,13 @@ if ( ! function_exists( 'segue_register_menus' ) ) {
   }
   add_action( 'init', 'segue_register_menus' );
 }
+
+function segue_register_sidebars() {
+  // See the __() WordPress function for valid values for $text_domain.
+  register_sidebar( array(
+    'id'          => 'right-sidebar',
+    'name'        => __( 'Right Sidebar', 'segue' ),
+    'description' => __( 'The right sidebar', 'segue' ),
+  ) );
+}
+add_action( 'init', 'segue_register_sidebars' );
