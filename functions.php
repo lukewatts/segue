@@ -24,7 +24,15 @@ function segue_load_scripts() {
 
   // Footer Scripts
   wp_enqueue_script( 'bootstrap-js', JS . 'vendor/bootstrap.min.js', array( 'jquery' ), false, true );
-  wp_enqueue_script( 'segue-main', JS . 'main.js', array( 'jquery' ), false, true );
+  
+  // Load a different header scroll script depending on whether or not the admin bar is showing
+  if ( is_admin_bar_showing() ) {
+    wp_enqueue_script( 'segue-main', JS . 'header-scroll-admin-bar.js', array( 'jquery' ), false, true );
+  }
+  else {
+   wp_enqueue_script( 'segue-main', JS . 'header-scroll.js', array( 'jquery' ), false, true );
+  }
+  
 }
 add_action( 'wp_enqueue_scripts', 'segue_load_scripts' );
 
