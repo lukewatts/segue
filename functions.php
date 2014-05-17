@@ -8,6 +8,13 @@ define( 'CSS', ASSETS . 'css/' );
 define( 'JS', ASSETS . 'js/' );
 define( 'IMG', ASSETS . 'img/' );
 
+function segue_setup() {
+  if ( is_admin() ) {
+    require_once( 'core/build-admin.php' );
+  }
+}
+add_filter( 'init', 'segue_setup' );
+
 /**
  * Load our stylesheets and javascript
  * 
