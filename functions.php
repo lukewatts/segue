@@ -1,5 +1,9 @@
 <?php
 
+/* ========================================
+ * CONSTANTS
+ * ======================================== */
+
 /**
  * Define our path constants
  */
@@ -7,13 +11,6 @@ define( 'ASSETS', get_template_directory_uri() . '/assets/' );
 define( 'CSS', ASSETS . 'css/' );
 define( 'JS', ASSETS . 'js/' );
 define( 'IMG', ASSETS . 'img/' );
-
-function segue_setup() {
-  if ( is_admin() ) {
-    require_once( 'core/build-admin.php' );
-  }
-}
-add_filter( 'init', 'segue_setup' );
 
 /**
  * Load our stylesheets and javascript
@@ -71,3 +68,14 @@ function segue_register_sidebars() {
   ) );
 }
 add_action( 'init', 'segue_register_sidebars' );
+
+/* ==============================
+ * Options Panel
+ * ============================== */
+if ( !class_exists( 'ReduxFramework' ) ) {
+  require_once( dirname( __FILE__ ) . '/core/framework.php' );
+}
+
+if ( !isset( $redux_demo ) ) {
+  require_once( dirname( __FILE__ ) . '/admin/config.php' );
+}

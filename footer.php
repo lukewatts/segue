@@ -5,10 +5,19 @@
   <footer class="container">
     <section class="row">
       <div class="span6 copyright-info" >
-        <p>&copy; 2014 - Andrew Byrne</p>
+        <p>
+
+        <?php
+
+        global $data;
+
+            echo $data[ 'copyright' ];  
+
+        ?>
+        </p>
       </div>
       <div class="span6 right-footer-thingy">
-        <p>Some other stuff here</p>
+        <p><?php echo $data[ 'footer-text' ]; ?></p>
       </div>
     </section>
   </footer>
